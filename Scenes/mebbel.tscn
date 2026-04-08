@@ -1,0 +1,50 @@
+[gd_scene format=3 uid="uid://2lxs4bgepfm3"]
+
+[ext_resource type="Script" uid="uid://bodcorh8if7cx" path="res://Scripts/mebbel.gd" id="1_ugmop"]
+[ext_resource type="Texture2D" uid="uid://djsswmxxf0pit" path="res://Assets/Mebbel.png" id="2_e7b6v"]
+
+[sub_resource type="CircleShape2D" id="CircleShape2D_ae2mx"]
+radius = 34.058773
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_nqnf6"]
+atlas = ExtResource("2_e7b6v")
+region = Rect2(0, 0, 32, 32)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_mkiuw"]
+atlas = ExtResource("2_e7b6v")
+region = Rect2(32, 0, 32, 32)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_8wpf4"]
+atlas = ExtResource("2_e7b6v")
+region = Rect2(0, 32, 32, 32)
+
+[sub_resource type="SpriteFrames" id="SpriteFrames_0ymcb"]
+animations = [{
+"frames": [{
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_nqnf6")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_mkiuw")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_8wpf4")
+}],
+"loop": true,
+"name": &"default",
+"speed": 5.0
+}]
+
+[node name="Mebbel" type="CharacterBody2D" unique_id=979880016]
+script = ExtResource("1_ugmop")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="." unique_id=671951297]
+position = Vector2(0, 7)
+shape = SubResource("CircleShape2D_ae2mx")
+
+[node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="." unique_id=1502396590]
+texture_filter = 1
+position = Vector2(-0.9999924, 3.8146973e-06)
+scale = Vector2(3.03125, 2.9375)
+sprite_frames = SubResource("SpriteFrames_0ymcb")
+frame_progress = 0.8192958
