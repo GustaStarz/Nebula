@@ -1,0 +1,10 @@
+~ start
+Test: [[Oi|Olá|Opa]], alô, alô, [wave amp=25 freq=5]diálogo teste!![/wave]
+Nathan: Exemplo escolhas:
+- um
+	Nathan: tu apertou um
+- dois
+	Nathan: apertou dois
+-fala denovo chefe => start
+-tchau kk => END
+=> END
