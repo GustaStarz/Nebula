@@ -8,4 +8,4 @@ func _physics_process(delta: float) -> void:
 func mover():
 	direction = Input.get_vector("ui_left", "ui_right", "ui_up", "ui_down")
 	velocity = SPEED * direction
-	$AnimatedSprite2D.play("andano2")
+	$AnimatedSprite2D.play("Andando3")
