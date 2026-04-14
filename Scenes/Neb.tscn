@@ -250,7 +250,7 @@ position = Vector2(4, -7)
 scale = Vector2(0.42812502, 0.41093764)
 sprite_frames = SubResource("SpriteFrames_it8n0")
 animation = &"Andando3"
-frame_progress = 0.5628108
+frame_progress = 0.74969697
 
 [node name="Camera2D" type="Camera2D" parent="." unique_id=421616037]
 position_smoothing_enabled = true
