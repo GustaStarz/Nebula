@@ -255,3 +255,6 @@ frame_progress = 0.74969697
 [node name="Camera2D" type="Camera2D" parent="." unique_id=421616037]
 position_smoothing_enabled = true
 position_smoothing_speed = 8.0
+
+[node name="EmissorBala" type="Marker2D" parent="." unique_id=882580912]
+position = Vector2(12, -21)

@@ -4,7 +4,7 @@
 [ext_resource type="Texture2D" uid="uid://b1iswvoa8v25u" path="res://Assets/balav2.png" id="2_3tbbd"]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_3tbbd"]
-size = Vector2(70, 7)
+size = Vector2(69, 7)
 
 [sub_resource type="AtlasTexture" id="AtlasTexture_eysv6"]
 atlas = ExtResource("2_3tbbd")
@@ -21,13 +21,13 @@ region = Rect2(0, 32, 32, 32)
 [sub_resource type="SpriteFrames" id="SpriteFrames_fyvky"]
 animations = [{
 "frames": [{
-"duration": 1.0,
+"duration": 0.5,
 "texture": SubResource("AtlasTexture_eysv6")
 }, {
-"duration": 1.0,
+"duration": 0.5,
 "texture": SubResource("AtlasTexture_nh0qf")
 }, {
-"duration": 1.0,
+"duration": 0.5,
 "texture": SubResource("AtlasTexture_sv5kv")
 }],
 "loop": true,
@@ -39,12 +39,13 @@ animations = [{
 script = ExtResource("1_3tbbd")
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="." unique_id=185232759]
-position = Vector2(35, 3.5)
+position = Vector2(34.5, 3.5)
 shape = SubResource("RectangleShape2D_3tbbd")
 
 [node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="." unique_id=555013276]
 texture_filter = 1
-position = Vector2(45.999996, 5.999998)
+position = Vector2(42, 6.0000005)
 scale = Vector2(3.7734373, 4.2890625)
 sprite_frames = SubResource("SpriteFrames_fyvky")
-frame_progress = 0.7815685
+autoplay = "default"
+frame_progress = 0.38957307

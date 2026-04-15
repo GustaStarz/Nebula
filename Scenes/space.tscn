@@ -1,0 +1,32 @@
+[gd_scene format=3 uid="uid://c2vc18u56hf8a"]
+
+[ext_resource type="Texture2D" uid="uid://b2v8n0m5w2w2n" path="res://Assets/spacetest.png" id="1_0ll74"]
+[ext_resource type="Script" uid="uid://c0f0fuoy3fqu2" path="res://Scenes/space.gd" id="2_p3ued"]
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_p3ued"]
+atlas = ExtResource("1_0ll74")
+region = Rect2(0, 0, 256, 256)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_2fo43"]
+atlas = ExtResource("1_0ll74")
+region = Rect2(0, 256, 256, 256)
+
+[sub_resource type="SpriteFrames" id="SpriteFrames_wnfdr"]
+animations = [{
+"frames": [{
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_p3ued")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_2fo43")
+}],
+"loop": true,
+"name": &"default",
+"speed": 5.0
+}]
+
+[node name="Space" type="AnimatedSprite2D" unique_id=1958896251]
+texture_filter = 1
+sprite_frames = SubResource("SpriteFrames_wnfdr")
+frame_progress = 0.78979254
+script = ExtResource("2_p3ued")

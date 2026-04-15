@@ -646,4 +646,4 @@ tile_set = SubResource("TileSet_gw3gf")
 position = Vector2(123, 85)
 
 [node name="Mebbel" parent="." unique_id=979880016 instance=ExtResource("2_acukj")]
-position = Vector2(358, 203)
+position = Vector2(245, 168)
