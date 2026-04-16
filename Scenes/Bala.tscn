@@ -49,3 +49,9 @@ scale = Vector2(3.7734373, 4.2890625)
 sprite_frames = SubResource("SpriteFrames_fyvky")
 autoplay = "default"
 frame_progress = 0.38957307
+
+[node name="Timer" type="Timer" parent="." unique_id=1775259558]
+wait_time = 8.0
+autostart = true
+
+[connection signal="timeout" from="Timer" to="." method="_on_timer_timeout"]

@@ -2,6 +2,7 @@
 
 [ext_resource type="Script" uid="uid://baoowecmjnlnv" path="res://Scripts/neb.gd" id="1_546wx"]
 [ext_resource type="Texture2D" uid="uid://cyaosi2be2llr" path="res://Assets/neb.png" id="1_paomf"]
+[ext_resource type="PackedScene" uid="uid://bfob61lstevto" path="res://Scenes/Bala.tscn" id="2_5id71"]
 [ext_resource type="Texture2D" uid="uid://bu5xbqwnq2sa1" path="res://Assets/Neb_v2.png" id="2_ynvhf"]
 [ext_resource type="Texture2D" uid="uid://b4u8watb4m277" path="res://Assets/icon.svg" id="3_6vu12"]
 [ext_resource type="Texture2D" uid="uid://bfqnh0y2cukf4" path="res://Assets/andano2.png" id="3_nhtur"]
@@ -120,7 +121,39 @@ region = Rect2(64, 0, 64, 64)
 
 [sub_resource type="AtlasTexture" id="AtlasTexture_60x7h"]
 atlas = ExtResource("3_rau38")
+region = Rect2(128, 0, 64, 64)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_8b80r"]
+atlas = ExtResource("3_rau38")
 region = Rect2(0, 64, 64, 64)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_yn0qi"]
+atlas = ExtResource("3_rau38")
+region = Rect2(64, 64, 64, 64)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_7ac2k"]
+atlas = ExtResource("3_rau38")
+region = Rect2(128, 64, 64, 64)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_7lp5l"]
+atlas = ExtResource("3_rau38")
+region = Rect2(0, 128, 64, 64)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_u7c5r"]
+atlas = ExtResource("3_rau38")
+region = Rect2(64, 128, 64, 64)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_qt4gp"]
+atlas = ExtResource("3_rau38")
+region = Rect2(128, 128, 64, 64)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_4l3t2"]
+atlas = ExtResource("3_rau38")
+region = Rect2(0, 192, 64, 64)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_bcqc3"]
+atlas = ExtResource("3_rau38")
+region = Rect2(64, 192, 64, 64)
 
 [sub_resource type="SpriteFrames" id="SpriteFrames_it8n0"]
 animations = [{
@@ -215,17 +248,46 @@ animations = [{
 "speed": 5.0
 }, {
 "frames": [{
-"duration": 0.8,
+"duration": 1.0,
 "texture": SubResource("AtlasTexture_uv1ac")
 }, {
-"duration": 0.8,
+"duration": 1.0,
 "texture": SubResource("AtlasTexture_pbjdu")
 }, {
-"duration": 0.8,
+"duration": 1.0,
 "texture": SubResource("AtlasTexture_60x7h")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_8b80r")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_yn0qi")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_7ac2k")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_7lp5l")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_u7c5r")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_qt4gp")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_4l3t2")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_bcqc3")
 }],
 "loop": false,
 "name": &"atacano",
+"speed": 5.0
+}, {
+"frames": [],
+"loop": true,
+"name": &"new_animation",
 "speed": 5.0
 }, {
 "frames": [{
@@ -239,6 +301,7 @@ animations = [{
 
 [node name="Neb" type="CharacterBody2D" unique_id=1732479478 groups=["Player"]]
 script = ExtResource("1_546wx")
+projetil = ExtResource("2_5id71")
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="." unique_id=809358855]
 position = Vector2(-1, -2)
@@ -249,8 +312,7 @@ texture_filter = 1
 position = Vector2(4, -7)
 scale = Vector2(0.42812502, 0.41093764)
 sprite_frames = SubResource("SpriteFrames_it8n0")
-animation = &"Andando3"
-frame_progress = 0.74969697
+animation = &"atacano"
 
 [node name="Camera2D" type="Camera2D" parent="." unique_id=421616037]
 position_smoothing_enabled = true
@@ -258,3 +320,5 @@ position_smoothing_speed = 8.0
 
 [node name="EmissorBala" type="Marker2D" parent="." unique_id=882580912]
 position = Vector2(12, -21)
+
+[connection signal="animation_finished" from="AnimatedSprite2D" to="." method="_on_animated_sprite_2d_animation_finished"]
