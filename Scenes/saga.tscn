@@ -1,0 +1,67 @@
+[gd_scene format=3 uid="uid://bl4brty3d743f"]
+
+[ext_resource type="Texture2D" uid="uid://bybq5f6g2kyuk" path="res://Assets/sagitarrius_a(Anim1).png" id="1_kfb1m"]
+
+[sub_resource type="CircleShape2D" id="CircleShape2D_fjlxc"]
+radius = 116.15507
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_0f4fq"]
+atlas = ExtResource("1_kfb1m")
+region = Rect2(0, 0, 640, 640)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_mk3vi"]
+atlas = ExtResource("1_kfb1m")
+region = Rect2(640, 0, 640, 640)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_jbqki"]
+atlas = ExtResource("1_kfb1m")
+region = Rect2(0, 640, 640, 640)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_yojci"]
+atlas = ExtResource("1_kfb1m")
+region = Rect2(640, 640, 640, 640)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_dfguu"]
+atlas = ExtResource("1_kfb1m")
+region = Rect2(0, 1280, 640, 640)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_d8lai"]
+atlas = ExtResource("1_kfb1m")
+region = Rect2(640, 1280, 640, 640)
+
+[sub_resource type="SpriteFrames" id="SpriteFrames_20wbf"]
+animations = [{
+"frames": [{
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_0f4fq")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_mk3vi")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_jbqki")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_yojci")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_dfguu")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_d8lai")
+}],
+"loop": true,
+"name": &"default",
+"speed": 4.0
+}]
+
+[node name="Saga" type="CharacterBody2D" unique_id=424173680]
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="." unique_id=1552840170]
+position = Vector2(22, 8)
+shape = SubResource("CircleShape2D_fjlxc")
+
+[node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="." unique_id=928686037]
+texture_filter = 1
+sprite_frames = SubResource("SpriteFrames_20wbf")
+frame_progress = 0.93265116

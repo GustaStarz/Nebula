@@ -43,7 +43,7 @@ func _ready() -> void:
 func take_damage(amount: float) -> void:
 	current_hp = clamp(current_hp - amount, 0, max_hp)
 	emit_signal("hp_changed", current_hp)
-	
+	$AudioStreamPlayer2D.play()
 	if current_hp <= 0:
 		die()
 
@@ -54,4 +54,5 @@ func heal(amount: float) -> void:
 func die() -> void:
 	emit_signal("player_died")
 	# Adicione aqui animação de morte, game over, etc.
-	queue_free()
+#	queue_free()
+	$AudioStreamPlayer2D2.play()

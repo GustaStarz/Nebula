@@ -1,6 +1,7 @@
 [gd_scene format=3 uid="uid://bcdpvga6aek5t"]
 
-[ext_resource type="Script" uid="uid://c06elp5vcv5r7" path="res://barra_hp.gd" id="1_8m1kd"]
+[ext_resource type="Script" uid="uid://c06elp5vcv5r7" path="res://Scripts/barra_hp.gd" id="1_8m1kd"]
+
 
 [sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_reubb"]
 
