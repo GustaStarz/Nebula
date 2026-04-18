@@ -1,0 +1,16 @@
+[gd_scene format=3 uid="uid://b6jy1ukqtn5kr"]
+
+[ext_resource type="Script" uid="uid://cyg2boe8qab4u" path="res://area_dano_test.gd" id="1_5p5rw"]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_ey2fs"]
+size = Vector2(168, 118)
+
+[node name="AreaDanoTest" type="Area2D" unique_id=1516787110]
+script = ExtResource("1_5p5rw")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="." unique_id=603626685]
+position = Vector2(87, 58)
+shape = SubResource("RectangleShape2D_ey2fs")
+
+[connection signal="body_entered" from="." to="." method="_on_body_entered"]
+[connection signal="body_exited" from="." to="." method="_on_body_exited"]

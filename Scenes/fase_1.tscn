@@ -5,6 +5,8 @@
 [ext_resource type="PackedScene" uid="uid://2kaumxojvqs7" path="res://Scenes/Neb.tscn" id="1_l3mkw"]
 [ext_resource type="PackedScene" uid="uid://2lxs4bgepfm3" path="res://Scenes/mebbel.tscn" id="2_acukj"]
 [ext_resource type="Texture2D" uid="uid://d3gcrsu3w0qc3" path="res://Assets/espaço2.png" id="3_gw3gf"]
+[ext_resource type="PackedScene" uid="uid://bl0r28b0phv45" path="res://ui.tscn" id="6_hya8f"]
+[ext_resource type="PackedScene" uid="uid://b6jy1ukqtn5kr" path="res://area_dano_test.tscn" id="7_aw74n"]
 
 [sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_gw3gf"]
 texture = ExtResource("1_efuq8")
@@ -643,7 +645,12 @@ scale = Vector2(1.5, 1.5)
 tile_set = SubResource("TileSet_gw3gf")
 
 [node name="Neb" parent="." unique_id=1732479478 instance=ExtResource("1_l3mkw")]
-position = Vector2(123, 85)
+position = Vector2(126, 66)
 
 [node name="Mebbel" parent="." unique_id=979880016 instance=ExtResource("2_acukj")]
 position = Vector2(245, 168)
+
+[node name="ui" parent="." unique_id=892129009 instance=ExtResource("6_hya8f")]
+
+[node name="AreaDanoTest" parent="." unique_id=1516787110 instance=ExtResource("7_aw74n")]
+position = Vector2(193, 117)

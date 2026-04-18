@@ -299,7 +299,7 @@ animations = [{
 "speed": 5.0
 }]
 
-[node name="Neb" type="CharacterBody2D" unique_id=1732479478 groups=["Player"]]
+[node name="Neb" type="CharacterBody2D" unique_id=1732479478 groups=["Player", "player"]]
 script = ExtResource("1_546wx")
 projetil = ExtResource("2_5id71")
 
