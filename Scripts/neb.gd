@@ -19,7 +19,7 @@ const SEQUENCIA_HORARIA = ["right", "down", "left", "up"]
 const SEQUENCIA_ANTI_HORARIA = ["up", "left", "down", "right"]
 
 func _input(event: InputEvent) -> void:
-	if event.is_action_pressed("test"):
+	if event.is_action_pressed("shoot"):
 		disparar()
 
 func disparar():

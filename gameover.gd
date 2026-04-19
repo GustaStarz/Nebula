@@ -1,7 +1,7 @@
 extends Node2D
 
 func _on_button_pressed() -> void:
-	get_tree().change_scene_to_file("res://Scenes/fase_1.tscn")
+		fade_e_trocar_cena()
 func _ready() -> void:
 	var canvas = CanvasLayer.new()
 	add_child(canvas)
@@ -18,3 +18,19 @@ func _ready() -> void:
 		canvas.queue_free()
 	)
 	$AudioStreamPlayer.play()
+func fade_e_trocar_cena() -> void:
+	$AudioStreamPlayer2.play()
+	var canvas = CanvasLayer.new()
+	add_child(canvas)
+	
+	var fade = ColorRect.new()
+	fade.color = Color(1, 1, 1, 0)  # branco transparente
+	fade.set_anchors_preset(Control.PRESET_FULL_RECT)
+	canvas.add_child(fade)
+	
+	var tween = create_tween()
+	tween.tween_property(fade, "color", Color(1, 1, 1, 1), 4.0)\
+		.set_trans(Tween.TRANS_LINEAR)
+	tween.finished.connect(func():
+		get_tree().change_scene_to_file("res://Scenes/fase_1.tscn")
+	)

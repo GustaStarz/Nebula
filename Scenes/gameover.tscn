@@ -2,6 +2,7 @@
 
 [ext_resource type="Script" uid="uid://bnj6bjurycm4l" path="res://gameover.gd" id="1_fg4p2"]
 [ext_resource type="AudioStream" uid="uid://b365t85nwnnn" path="res://Sons/death-supernova (mp3cut.net) (1).mp3" id="2_qpupn"]
+[ext_resource type="AudioStream" uid="uid://dtc4gmdlv11pu" path="res://Sons/Random (2).wav" id="3_2oltb"]
 
 [node name="gameover" type="Node2D" unique_id=478714528]
 script = ExtResource("1_fg4p2")
@@ -27,5 +28,8 @@ offset_top = 146.0
 offset_right = 528.0
 offset_bottom = 169.0
 text = "morreu no lugar dos dev irmao? kkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkk"
+
+[node name="AudioStreamPlayer2" type="AudioStreamPlayer" parent="." unique_id=376667882]
+stream = ExtResource("3_2oltb")
 
 [connection signal="pressed" from="Button" to="." method="_on_button_pressed"]

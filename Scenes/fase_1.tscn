@@ -11,6 +11,7 @@
 [ext_resource type="PackedScene" uid="uid://d0if4vvhcthx4" path="res://Scenes/area_dano_fraca.tscn" id="9_ds3y1"]
 [ext_resource type="PackedScene" uid="uid://b7tosdptsxfw3" path="res://Scenes/alvo.tscn" id="10_ds3y1"]
 [ext_resource type="PackedScene" uid="uid://btmg00m8d22vf" path="res://Scenes/portal_laranja.tscn" id="11_2q620"]
+[ext_resource type="PackedScene" uid="uid://c4004qkawa4r1" path="res://Scenes/mira.tscn" id="12_14sx1"]
 
 [sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_gw3gf"]
 texture = ExtResource("1_efuq8")
@@ -693,3 +694,5 @@ position = Vector2(599, -129)
 
 [node name="portal_laranja" parent="." unique_id=1926614961 instance=ExtResource("11_2q620")]
 position = Vector2(268, -186)
+
+[node name="mira" parent="." unique_id=181386107 instance=ExtResource("12_14sx1")]

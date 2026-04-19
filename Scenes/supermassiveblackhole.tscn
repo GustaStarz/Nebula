@@ -11,6 +11,7 @@
 [ext_resource type="PackedScene" uid="uid://c8wsartkc03gm" path="res://Scenes/thom_yorke_radiohead.tscn" id="9_nd5yh"]
 [ext_resource type="PackedScene" uid="uid://m5ub2oxrtbi3" path="res://Scenes/kurt_cobain_nirvana.tscn" id="10_nd5yh"]
 [ext_resource type="Texture2D" uid="uid://ddw0rxqoj51xo" path="res://Placeholders/ibbiefren.png" id="11_at42w"]
+[ext_resource type="PackedScene" uid="uid://c4004qkawa4r1" path="res://Scenes/mira.tscn" id="12_7x00q"]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_nd5yh"]
 size = Vector2(20, 654)
@@ -106,3 +107,5 @@ text = "E para interagir"
 position = Vector2(1370, 616)
 scale = Vector2(0.45708954, 0.3330804)
 texture = ExtResource("11_at42w")
+
+[node name="mira" parent="." unique_id=181386107 instance=ExtResource("12_7x00q")]
