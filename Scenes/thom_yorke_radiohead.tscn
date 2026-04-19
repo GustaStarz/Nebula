@@ -1,0 +1,33 @@
+[gd_scene format=3 uid="uid://c8wsartkc03gm"]
+
+[ext_resource type="Script" uid="uid://bv0054vmjh8b6" path="res://Scenes/thom_yorke_radiohead.gd" id="1_oe0d6"]
+[ext_resource type="Texture2D" uid="uid://c2tok3wlh27nf" path="res://Placeholders/pjcofphxshh31.jpg" id="1_ple0s"]
+[ext_resource type="Resource" uid="uid://dp17tvgjpdn1s" path="res://Diálogos/Dialogothomyorke.dialogue" id="2_mxrr1"]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_oe0d6"]
+size = Vector2(125, 123)
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_mxrr1"]
+size = Vector2(150, 173)
+
+[node name="thom_yorke_radiohead" type="CharacterBody2D" unique_id=1841549729]
+script = ExtResource("1_oe0d6")
+dialogue_resource = ExtResource("2_mxrr1")
+
+[node name="Sprite2D" type="Sprite2D" parent="." unique_id=1189511723]
+position = Vector2(2, 6.9999924)
+scale = Vector2(0.12350004, 0.09940705)
+texture = ExtResource("1_ple0s")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="." unique_id=839748136]
+position = Vector2(2.5, 6.5)
+shape = SubResource("RectangleShape2D_oe0d6")
+
+[node name="Area2D" type="Area2D" parent="." unique_id=2075647744]
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Area2D" unique_id=1263665502]
+position = Vector2(1, 0.5)
+shape = SubResource("RectangleShape2D_mxrr1")
+
+[connection signal="body_entered" from="Area2D" to="." method="_on_area_2d_body_entered"]
+[connection signal="body_exited" from="Area2D" to="." method="_on_area_2d_body_exited"]

@@ -35,7 +35,9 @@ animations = [{
 "speed": 5.0
 }]
 
-[node name="Bala" type="Area2D" unique_id=1867166246]
+[node name="Bala" type="Area2D" unique_id=1867166246 groups=["bala", "bala1"]]
+collision_layer = 2
+collision_mask = 4
 script = ExtResource("1_3tbbd")
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="." unique_id=185232759]

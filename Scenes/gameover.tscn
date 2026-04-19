@@ -1,0 +1,31 @@
+[gd_scene format=3 uid="uid://dn86lnlja1hnr"]
+
+[ext_resource type="Script" uid="uid://bnj6bjurycm4l" path="res://gameover.gd" id="1_fg4p2"]
+[ext_resource type="AudioStream" uid="uid://b365t85nwnnn" path="res://Sons/death-supernova (mp3cut.net) (1).mp3" id="2_qpupn"]
+
+[node name="gameover" type="Node2D" unique_id=478714528]
+script = ExtResource("1_fg4p2")
+
+[node name="Panel" type="Panel" parent="." unique_id=964472197]
+offset_right = 1149.0
+offset_bottom = 649.0
+
+[node name="Button" type="Button" parent="." unique_id=1803769234]
+offset_left = 483.0
+offset_top = 291.0
+offset_right = 636.0
+offset_bottom = 350.0
+text = "respawna aí"
+
+[node name="AudioStreamPlayer" type="AudioStreamPlayer" parent="." unique_id=954110045]
+stream = ExtResource("2_qpupn")
+autoplay = true
+
+[node name="Label" type="Label" parent="." unique_id=1884980623]
+offset_left = 488.0
+offset_top = 146.0
+offset_right = 528.0
+offset_bottom = 169.0
+text = "morreu no lugar dos dev irmao? kkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkk"
+
+[connection signal="pressed" from="Button" to="." method="_on_button_pressed"]

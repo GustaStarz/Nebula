@@ -1,0 +1,16 @@
+[remap]
+
+importer="dialogue_manager"
+importer_version=15
+type="Resource"
+uid="uid://bs5sahuucgj1b"
+path="res://.godot/imported/kurt.dialogue-a57a98ef153643a7291a910307d9632e.tres"
+
+[deps]
+
+source_file="res://Diálogos/kurt.dialogue"
+dest_files=["res://.godot/imported/kurt.dialogue-a57a98ef153643a7291a910307d9632e.tres"]
+
+[params]
+
+defaults=true

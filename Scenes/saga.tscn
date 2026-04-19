@@ -1,5 +1,6 @@
 [gd_scene format=3 uid="uid://bl4brty3d743f"]
 
+[ext_resource type="Script" uid="uid://dvd5fewptm26d" path="res://Scripts/saga.gd" id="1_fjlxc"]
 [ext_resource type="Texture2D" uid="uid://bybq5f6g2kyuk" path="res://Assets/sagitarrius_a(Anim1).png" id="1_kfb1m"]
 
 [sub_resource type="CircleShape2D" id="CircleShape2D_fjlxc"]
@@ -56,6 +57,7 @@ animations = [{
 }]
 
 [node name="Saga" type="CharacterBody2D" unique_id=424173680]
+script = ExtResource("1_fjlxc")
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="." unique_id=1552840170]
 position = Vector2(22, 8)
@@ -64,4 +66,4 @@ shape = SubResource("CircleShape2D_fjlxc")
 [node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="." unique_id=928686037]
 texture_filter = 1
 sprite_frames = SubResource("SpriteFrames_20wbf")
-frame_progress = 0.93265116
+frame_progress = 0.44004613
