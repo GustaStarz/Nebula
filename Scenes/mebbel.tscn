@@ -36,7 +36,10 @@ animations = [{
 }]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_ugmop"]
-size = Vector2(21, 49)
+size = Vector2(49, 49)
+
+[sub_resource type="CircleShape2D" id="CircleShape2D_ugmop"]
+radius = 167.3589
 
 [node name="Mebbel" type="CharacterBody2D" unique_id=979880016]
 script = ExtResource("1_ugmop")
@@ -53,10 +56,17 @@ scale = Vector2(3.03125, 2.9375)
 sprite_frames = SubResource("SpriteFrames_0ymcb")
 frame_progress = 0.8192958
 
-[node name="Area2D" type="Area2D" parent="." unique_id=868306078]
+[node name="AreaATK" type="Area2D" parent="." unique_id=868306078]
 
-[node name="CollisionShape2D" type="CollisionShape2D" parent="Area2D" unique_id=595658643]
-position = Vector2(32.5, 6.5)
+[node name="CollisionShape2D" type="CollisionShape2D" parent="AreaATK" unique_id=595658643]
+position = Vector2(46.5, 6.5)
 shape = SubResource("RectangleShape2D_ugmop")
 
-[connection signal="body_entered" from="Area2D" to="." method="_on_area_2d_body_entered"]
+[node name="Follow" type="Area2D" parent="." unique_id=302610714]
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Follow" unique_id=1610589970]
+shape = SubResource("CircleShape2D_ugmop")
+
+[connection signal="body_entered" from="AreaATK" to="." method="_on_area_2d_body_entered"]
+[connection signal="body_entered" from="Follow" to="." method="_on_follow_body_entered"]
+[connection signal="body_exited" from="Follow" to="." method="_on_follow_body_exited"]
