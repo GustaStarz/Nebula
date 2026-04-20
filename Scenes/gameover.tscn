@@ -1,6 +1,6 @@
 [gd_scene format=3 uid="uid://dn86lnlja1hnr"]
 
-[ext_resource type="Script" uid="uid://bnj6bjurycm4l" path="res://gameover.gd" id="1_fg4p2"]
+[ext_resource type="Script" uid="uid://bnj6bjurycm4l" path="res://__MACOSX/Scripts/gameover.gd" id="1_fg4p2"]
 [ext_resource type="AudioStream" uid="uid://b365t85nwnnn" path="res://Sons/death-supernova (mp3cut.net) (1).mp3" id="2_qpupn"]
 [ext_resource type="AudioStream" uid="uid://dtc4gmdlv11pu" path="res://Sons/Random (2).wav" id="3_2oltb"]
 

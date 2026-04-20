@@ -1,6 +1,6 @@
 [gd_scene format=3 uid="uid://btmg00m8d22vf"]
 
-[ext_resource type="Script" uid="uid://dgjy3gnq7qtjs" path="res://portal_laranja.gd" id="1_pqq6s"]
+[ext_resource type="Script" uid="uid://dgjy3gnq7qtjs" path="res://Scripts/portal_laranja.gd" id="1_pqq6s"]
 [ext_resource type="Texture2D" uid="uid://ccnngftgnxtol" path="res://Placeholders/images (12).jpg" id="2_i6q41"]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_xas80"]

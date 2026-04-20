@@ -1,6 +1,6 @@
 [gd_scene format=3 uid="uid://d0if4vvhcthx4"]
 
-[ext_resource type="Script" uid="uid://cr1gscldrw8qu" path="res://area_dano_fraca.gd" id="1_t31gh"]
+[ext_resource type="Script" uid="uid://cr1gscldrw8qu" path="res://Scripts/area_dano_fraca.gd" id="1_t31gh"]
 [ext_resource type="Texture2D" uid="uid://d4h4e57wyvy0w" path="res://Assets/damage.png" id="2_ewhku"]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_ey2fs"]

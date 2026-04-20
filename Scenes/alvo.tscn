@@ -1,7 +1,7 @@
 [gd_scene format=3 uid="uid://b7tosdptsxfw3"]
 
 [ext_resource type="Texture2D" uid="uid://303rvcm0fnp5" path="res://Assets/alvo.png" id="1_8aeg0"]
-[ext_resource type="Script" uid="uid://dstlu4fm3v8te" path="res://Scenes/alvo.gd" id="1_mrwlm"]
+[ext_resource type="Script" uid="uid://dstlu4fm3v8te" path="res://Scripts/alvo.gd" id="1_mrwlm"]
 [ext_resource type="Texture2D" uid="uid://bejhcqd8nyyeo" path="res://Assets/kaboom.png" id="3_x7wlw"]
 [ext_resource type="AudioStream" uid="uid://bvc6ny2nogm4j" path="res://Sons/starshoot.wav" id="4_528q7"]
 

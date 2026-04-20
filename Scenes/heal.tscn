@@ -1,7 +1,7 @@
 [gd_scene format=3 uid="uid://byunhqciu7b2m"]
 
 [ext_resource type="Texture2D" uid="uid://y0hr2t5qdkq" path="res://Assets/Heal.png" id="1_2bthj"]
-[ext_resource type="Script" uid="uid://cc7qrsax0dbi2" path="res://Scenes/heal.gd" id="1_vfgpi"]
+[ext_resource type="Script" uid="uid://cc7qrsax0dbi2" path="res://Scripts/heal.gd" id="1_vfgpi"]
 [ext_resource type="AudioStream" uid="uid://cfo3l5pip0vqs" path="res://Sons/heal.wav" id="3_weqha"]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_vfgpi"]
