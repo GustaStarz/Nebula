@@ -98,10 +98,10 @@ position = Vector2(550, 321)
 position = Vector2(229, 338)
 
 [node name="Label" type="Label" parent="." unique_id=1436168913]
-offset_left = 469.0
-offset_top = 326.0
-offset_right = 527.0
-offset_bottom = 360.0
+offset_left = 327.0
+offset_top = 234.0
+offset_right = 447.0
+offset_bottom = 268.0
 text = "E para interagir"
 
 [node name="Ibbiefren" type="Sprite2D" parent="." unique_id=727505737]
