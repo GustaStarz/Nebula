@@ -2,7 +2,6 @@
 
 [ext_resource type="Script" uid="uid://baoowecmjnlnv" path="res://Scripts/neb.gd" id="1_546wx"]
 [ext_resource type="Texture2D" uid="uid://cyaosi2be2llr" path="res://Assets/neb.png" id="1_paomf"]
-[ext_resource type="PackedScene" uid="uid://bfob61lstevto" path="res://Scenes/Bala.tscn" id="2_5id71"]
 [ext_resource type="Texture2D" uid="uid://bu5xbqwnq2sa1" path="res://Assets/Neb_v2.png" id="2_ynvhf"]
 [ext_resource type="Texture2D" uid="uid://b4u8watb4m277" path="res://Assets/icon.svg" id="3_6vu12"]
 [ext_resource type="Texture2D" uid="uid://bfqnh0y2cukf4" path="res://Assets/andano2.png" id="3_nhtur"]
@@ -240,7 +239,6 @@ animations = [{
 
 [node name="Neb" type="CharacterBody2D" unique_id=1732479478 groups=["Player"]]
 script = ExtResource("1_546wx")
-projetil = ExtResource("2_5id71")
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="." unique_id=809358855]
 position = Vector2(-1, -2)
