@@ -5,13 +5,6 @@
 [ext_resource type="PackedScene" uid="uid://2kaumxojvqs7" path="res://Scenes/Neb.tscn" id="1_l3mkw"]
 [ext_resource type="PackedScene" uid="uid://2lxs4bgepfm3" path="res://Scenes/mebbel.tscn" id="2_acukj"]
 [ext_resource type="Texture2D" uid="uid://d3gcrsu3w0qc3" path="res://Assets/espaço2.png" id="3_gw3gf"]
-[ext_resource type="PackedScene" uid="uid://bl0r28b0phv45" path="res://Scenes/ui.tscn" id="6_hya8f"]
-[ext_resource type="PackedScene" uid="uid://b6jy1ukqtn5kr" path="res://Scenes/area_dano_test.tscn" id="8_5p4kr"]
-[ext_resource type="PackedScene" uid="uid://byunhqciu7b2m" path="res://Scenes/heal.tscn" id="9_5p4kr"]
-[ext_resource type="PackedScene" uid="uid://d0if4vvhcthx4" path="res://Scenes/area_dano_fraca.tscn" id="9_ds3y1"]
-[ext_resource type="PackedScene" uid="uid://b7tosdptsxfw3" path="res://Scenes/alvo.tscn" id="10_ds3y1"]
-[ext_resource type="PackedScene" uid="uid://btmg00m8d22vf" path="res://Scenes/portal_laranja.tscn" id="11_2q620"]
-[ext_resource type="PackedScene" uid="uid://c4004qkawa4r1" path="res://Scenes/mira.tscn" id="12_14sx1"]
 
 [sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_gw3gf"]
 texture = ExtResource("1_efuq8")
@@ -650,49 +643,7 @@ scale = Vector2(1.5, 1.5)
 tile_set = SubResource("TileSet_gw3gf")
 
 [node name="Neb" parent="." unique_id=1732479478 instance=ExtResource("1_l3mkw")]
-position = Vector2(126, 66)
+position = Vector2(123, 85)
 
 [node name="Mebbel" parent="." unique_id=979880016 instance=ExtResource("2_acukj")]
-position = Vector2(-291, 320)
-
-[node name="ui" parent="." unique_id=892129009 instance=ExtResource("6_hya8f")]
-
-[node name="AreaDanoTest" parent="." unique_id=1516787110 instance=ExtResource("8_5p4kr")]
-position = Vector2(503, -19)
-
-[node name="Heal" parent="." unique_id=251431107 instance=ExtResource("9_5p4kr")]
-position = Vector2(590, 314)
-scale = Vector2(0.5, 0.5)
-
-[node name="Label" type="Label" parent="." unique_id=1247528632]
-offset_left = 574.0
-offset_top = -23.0
-offset_right = 614.0
-text = "-50"
-
-[node name="Label2" type="Label" parent="." unique_id=1861866061]
-offset_left = 571.0
-offset_top = 235.0
-offset_right = 611.0
-offset_bottom = 258.0
-text = "+50"
-
-[node name="AreaDanoFraca" parent="." unique_id=758148966 instance=ExtResource("9_ds3y1")]
-position = Vector2(560, 449)
-scale = Vector2(0.5, 0.5)
-
-[node name="Label3" type="Label" parent="." unique_id=1161976539]
-offset_left = 585.0
-offset_top = 432.0
-offset_right = 625.0
-offset_bottom = 455.0
-text = "-10
-"
-
-[node name="Alvo" parent="." unique_id=954774408 instance=ExtResource("10_ds3y1")]
-position = Vector2(599, -129)
-
-[node name="portal_laranja" parent="." unique_id=1926614961 instance=ExtResource("11_2q620")]
-position = Vector2(268, -186)
-
-[node name="mira" parent="." unique_id=181386107 instance=ExtResource("12_14sx1")]
+position = Vector2(245, 168)
