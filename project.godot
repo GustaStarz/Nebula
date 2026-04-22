@@ -30,7 +30,7 @@ editor/advanced/custom_test_scene_path="res://Scripts/addons/dialogue_manager/te
 
 [editor_plugins]
 
-enabled=PackedStringArray("res://addons/dialogue_manager/plugin.cfg")
+enabled=PackedStringArray()
 
 [global_group]
 

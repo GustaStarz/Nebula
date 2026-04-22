@@ -1,6 +1,7 @@
 extends CharacterBody2D
 @onready var timer_morte: Timer = $Timer_morte
 @onready var camera: Camera2D = $Camera2D  
+var pull_velocity: Vector2 = Vector2.ZERO
 const SPEED = 300
 var direction = Vector2(0,0)
 var atacando = false
@@ -54,7 +55,8 @@ func mover():
 		velocity = Vector2.ZERO
 		return
 	direction = Input.get_vector("ui_left", "ui_right", "ui_up", "ui_down")
-	velocity = SPEED * direction
+	velocity = SPEED * direction + pull_velocity
+	pull_velocity = Vector2.ZERO
 
 func tocar_animacao_ataque():
 	$AnimatedSprite2D.play("atacano")
