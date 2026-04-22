@@ -1,0 +1,33 @@
+[gd_scene format=3 uid="uid://m5ub2oxrtbi3"]
+
+[ext_resource type="Script" uid="uid://ce8kelmjgiyl5" path="res://Scripts/kurt_cobain_nirvana.gd" id="1_vjenw"]
+[ext_resource type="Resource" uid="uid://bs5sahuucgj1b" path="res://Diálogos/kurt.dialogue" id="2_4ruep"]
+[ext_resource type="Texture2D" uid="uid://dhnt4f40yyjt1" path="res://Placeholders/images (13).jpg" id="2_ong0j"]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_4ruep"]
+size = Vector2(113, 112)
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_eatoi"]
+size = Vector2(153, 143)
+
+[node name="Kurt_cobain_nirvana" type="CharacterBody2D" unique_id=867427314]
+script = ExtResource("1_vjenw")
+dialogue_resource = ExtResource("2_4ruep")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="." unique_id=813584410]
+position = Vector2(0.5, -2)
+shape = SubResource("RectangleShape2D_4ruep")
+
+[node name="Sprite2D" type="Sprite2D" parent="." unique_id=1201766678]
+position = Vector2(0.9999924, -1.0000076)
+scale = Vector2(0.5177778, 0.5133333)
+texture = ExtResource("2_ong0j")
+
+[node name="Area2D" type="Area2D" parent="." unique_id=1405740081]
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Area2D" unique_id=593262586]
+position = Vector2(-0.5, -3.5)
+shape = SubResource("RectangleShape2D_eatoi")
+
+[connection signal="body_entered" from="Area2D" to="." method="_on_area_2d_body_entered"]
+[connection signal="body_exited" from="Area2D" to="." method="_on_area_2d_body_exited"]

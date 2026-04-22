@@ -1,0 +1,141 @@
+[gd_scene format=3 uid="uid://bl4brty3d743f"]
+
+[ext_resource type="Script" uid="uid://dvd5fewptm26d" path="res://Scripts/saga.gd" id="1_fjlxc"]
+[ext_resource type="Texture2D" uid="uid://bybq5f6g2kyuk" path="res://Assets/sagitarrius_a(Anim1).png" id="1_kfb1m"]
+[ext_resource type="Texture2D" uid="uid://bi43xvkf3wbce" path="res://Assets/Saga_Bite.png" id="2_jbqki"]
+[ext_resource type="PackedScene" uid="uid://dwm3a41urxhx1" path="res://Scenes/campo_gravitacional.tscn" id="3_0f4fq"]
+[ext_resource type="PackedScene" uid="uid://co00wjide6eqp" path="res://Scenes/horizontedeeventos.tscn" id="4_mk3vi"]
+
+[sub_resource type="CircleShape2D" id="CircleShape2D_fjlxc"]
+radius = 123.00407
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_20wbf"]
+atlas = ExtResource("2_jbqki")
+region = Rect2(0, 0, 640, 640)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_u4xdw"]
+atlas = ExtResource("2_jbqki")
+region = Rect2(640, 0, 640, 640)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_j4xqf"]
+atlas = ExtResource("2_jbqki")
+region = Rect2(0, 640, 640, 640)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_32nk0"]
+atlas = ExtResource("2_jbqki")
+region = Rect2(640, 640, 640, 640)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_4seaq"]
+atlas = ExtResource("2_jbqki")
+region = Rect2(0, 1280, 640, 640)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_gveuw"]
+atlas = ExtResource("2_jbqki")
+region = Rect2(640, 1280, 640, 640)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_0f4fq"]
+atlas = ExtResource("1_kfb1m")
+region = Rect2(0, 0, 640, 640)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_mk3vi"]
+atlas = ExtResource("1_kfb1m")
+region = Rect2(640, 0, 640, 640)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_jbqki"]
+atlas = ExtResource("1_kfb1m")
+region = Rect2(0, 640, 640, 640)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_yojci"]
+atlas = ExtResource("1_kfb1m")
+region = Rect2(640, 640, 640, 640)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_dfguu"]
+atlas = ExtResource("1_kfb1m")
+region = Rect2(0, 1280, 640, 640)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_d8lai"]
+atlas = ExtResource("1_kfb1m")
+region = Rect2(640, 1280, 640, 640)
+
+[sub_resource type="SpriteFrames" id="SpriteFrames_20wbf"]
+animations = [{
+"frames": [{
+"duration": 1.3,
+"texture": SubResource("AtlasTexture_20wbf")
+}, {
+"duration": 1.3,
+"texture": SubResource("AtlasTexture_u4xdw")
+}, {
+"duration": 1.3,
+"texture": SubResource("AtlasTexture_j4xqf")
+}, {
+"duration": 1.3,
+"texture": SubResource("AtlasTexture_32nk0")
+}, {
+"duration": 1.3,
+"texture": SubResource("AtlasTexture_4seaq")
+}, {
+"duration": 1.3,
+"texture": SubResource("AtlasTexture_gveuw")
+}],
+"loop": true,
+"name": &"atacano",
+"speed": 5.0
+}, {
+"frames": [{
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_0f4fq")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_mk3vi")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_jbqki")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_yojci")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_dfguu")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_d8lai")
+}],
+"loop": true,
+"name": &"default",
+"speed": 4.0
+}]
+
+[sub_resource type="CircleShape2D" id="CircleShape2D_jbqki"]
+radius = 128.0039
+
+[node name="Saga" type="CharacterBody2D" unique_id=424173680]
+script = ExtResource("1_fjlxc")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="." unique_id=1552840170]
+position = Vector2(22, 8)
+shape = SubResource("CircleShape2D_fjlxc")
+disabled = true
+
+[node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="." unique_id=928686037]
+texture_filter = 1
+position = Vector2(-5.5000257, 1.9999795)
+scale = Vector2(1.0484375, 1.025)
+sprite_frames = SubResource("SpriteFrames_20wbf")
+frame_progress = 0.77086854
+
+[node name="Campo_Gravitacional" parent="." unique_id=1619011204 instance=ExtResource("3_0f4fq")]
+position = Vector2(19, 27)
+
+[node name="Horizontedeeventos" parent="." unique_id=1363420341 instance=ExtResource("4_mk3vi")]
+position = Vector2(15.000001, 5.0000005)
+scale = Vector2(1.3, 1.3)
+
+[node name="check" type="Area2D" parent="." unique_id=834694494]
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="check" unique_id=677662815]
+position = Vector2(14, 6)
+shape = SubResource("CircleShape2D_jbqki")
+
+[connection signal="body_entered" from="check" to="." method="_on_check_body_entered"]
+[connection signal="body_exited" from="check" to="." method="_on_check_body_exited"]

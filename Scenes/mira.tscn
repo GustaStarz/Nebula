@@ -1,0 +1,13 @@
+[gd_scene format=3 uid="uid://c4004qkawa4r1"]
+
+[ext_resource type="Script" uid="uid://ejhw0ut1b3ta" path="res://Scripts/mira.gd" id="1_ps8e5"]
+[ext_resource type="Texture2D" uid="uid://b4jrnhbs2d44r" path="res://Assets/Mira_center.png" id="2_ps8e5"]
+
+[node name="mira" type="Node2D" unique_id=181386107]
+script = ExtResource("1_ps8e5")
+
+[node name="Sprite2D" type="Sprite2D" parent="." unique_id=2001344699]
+texture_filter = 1
+position = Vector2(1, 0)
+texture = ExtResource("2_ps8e5")
+offset = Vector2(1.4, 2.2)

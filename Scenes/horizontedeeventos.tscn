@@ -1,0 +1,15 @@
+[gd_scene format=3 uid="uid://co00wjide6eqp"]
+
+[ext_resource type="Script" uid="uid://bgtcfklnoaegw" path="res://horizontedeeventos.gd" id="1_i5lh1"]
+
+[sub_resource type="CircleShape2D" id="CircleShape2D_j6ck0"]
+radius = 101.4002
+
+[node name="Horizontedeeventos" type="Area2D" unique_id=1363420341]
+script = ExtResource("1_i5lh1")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="." unique_id=1724399314]
+shape = SubResource("CircleShape2D_j6ck0")
+
+[connection signal="body_entered" from="." to="." method="_on_body_entered"]
+[connection signal="body_exited" from="." to="." method="_on_body_exited"]

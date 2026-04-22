@@ -1,0 +1,14 @@
+[gd_scene format=3 uid="uid://dwm3a41urxhx1"]
+
+[ext_resource type="Script" uid="uid://ckaunpgt8ttij" path="res://Scripts/campo_gravitacional.gd" id="1_xbmid"]
+
+[sub_resource type="CapsuleShape2D" id="CapsuleShape2D_xbmid"]
+radius = 229.955
+height = 628.0188
+
+[node name="Campo_Gravitacional" type="Area2D" unique_id=1619011204]
+script = ExtResource("1_xbmid")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="." unique_id=418749390]
+rotation = 1.574727
+shape = SubResource("CapsuleShape2D_xbmid")

@@ -1,0 +1,39 @@
+[gd_scene format=3 uid="uid://byunhqciu7b2m"]
+
+[ext_resource type="Texture2D" uid="uid://y0hr2t5qdkq" path="res://Assets/Heal.png" id="1_2bthj"]
+[ext_resource type="Script" uid="uid://cc7qrsax0dbi2" path="res://Scripts/heal.gd" id="1_vfgpi"]
+[ext_resource type="AudioStream" uid="uid://cfo3l5pip0vqs" path="res://Sons/heal.wav" id="3_weqha"]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_vfgpi"]
+size = Vector2(202, 209)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_weqha"]
+atlas = ExtResource("1_2bthj")
+region = Rect2(0, 0, 320, 320)
+
+[sub_resource type="SpriteFrames" id="SpriteFrames_6d0i5"]
+animations = [{
+"frames": [{
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_weqha")
+}],
+"loop": true,
+"name": &"default",
+"speed": 5.0
+}]
+
+[node name="Heal" type="Area2D" unique_id=251431107]
+script = ExtResource("1_vfgpi")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="." unique_id=716105729]
+position = Vector2(12, -9.5)
+shape = SubResource("RectangleShape2D_vfgpi")
+
+[node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="." unique_id=1884795029]
+texture_filter = 1
+sprite_frames = SubResource("SpriteFrames_6d0i5")
+
+[node name="AudioStreamPlayer2D" type="AudioStreamPlayer2D" parent="." unique_id=503556342]
+stream = ExtResource("3_weqha")
+
+[connection signal="body_entered" from="." to="." method="_on_body_entered"]
