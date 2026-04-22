@@ -1,8 +1,10 @@
 [gd_scene format=3 uid="uid://m5ub2oxrtbi3"]
 
 [ext_resource type="Script" uid="uid://ce8kelmjgiyl5" path="res://Scripts/kurt_cobain_nirvana.gd" id="1_vjenw"]
-[ext_resource type="Resource" uid="uid://bs5sahuucgj1b" path="res://Diálogos/kurt.dialogue" id="2_4ruep"]
 [ext_resource type="Texture2D" uid="uid://dhnt4f40yyjt1" path="res://Placeholders/images (13).jpg" id="2_ong0j"]
+
+[sub_resource type="Resource" id="Resource_vjenw"]
+metadata/__load_path__ = "res://Diálogos/kurt.dialogue"
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_4ruep"]
 size = Vector2(113, 112)
@@ -12,7 +14,7 @@ size = Vector2(153, 143)
 
 [node name="Kurt_cobain_nirvana" type="CharacterBody2D" unique_id=867427314]
 script = ExtResource("1_vjenw")
-dialogue_resource = ExtResource("2_4ruep")
+dialogue_resource = SubResource("Resource_vjenw")
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="." unique_id=813584410]
 position = Vector2(0.5, -2)
